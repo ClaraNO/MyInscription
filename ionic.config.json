@@ -1,0 +1,7 @@
+{
+  "name": "MyInscription",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
