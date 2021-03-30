@@ -4,11 +4,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-tab4',
+  templateUrl: './tab4.page.html',
+  styleUrls: ['./tab4.page.scss'],
 })
-export class Tab1Page {
+export class Tab4Page {
 
   constructor(public firestore: AngularFirestore) {
     this.items = firestore.collection('Candidat').valueChanges();
@@ -17,4 +17,3 @@ export class Tab1Page {
   
   
 }
-
