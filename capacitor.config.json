@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "myInscription",
+  "appName": "MyInscription",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
