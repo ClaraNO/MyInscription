@@ -15,6 +15,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBalxkwpnx9luSrNm1mCcufuQtZtetYExU",
   authDomain: "myinscription-13431.firebaseapp.com",
