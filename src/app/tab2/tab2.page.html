@@ -1,17 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title>
+        Inscription 
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+  <ion-content [fullscreen]="true">
+    <ion-list>
+      <ion-list-header>
+        <h1><u>Bienvenue</u></h1>
+      </ion-list-header>
+        <ion-menu-toggle [autoHide]="false">
+            <ion-item>
+              <ion-label position="floating"><h1>Votre Nom :</h1></ion-label>
+              <ion-input [(ngModel)]="firebaseTextNom" type="text" placerholder="Entrez votre Nom"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating"><h1>Votre Prénom :</h1></ion-label>
+              <ion-input [(ngModel)]="firebaseTextPrenom" type="text" placerholder="Entrez votre Prenom"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating"><h1>Votre adresse mail :</h1></ion-label>
+              <ion-input [(ngModel)]="firebaseTextMail" type="text" placerholder="Entrez votre Mail"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating"><h1>Votre Etablissement :</h1></ion-label>
+              <ion-input [(ngModel)]="firebaseTextEta" type="text" placerholder="Entrez votre Etablissement"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating"><h1>Votre Bac :</h1></ion-label>
+              <ion-input [(ngModel)]="firebaseTextBac" type="text" placerholder="Entrez votre Bac"></ion-input>
+            </ion-item>
+<br>
+            <ion-list> 
+              <ion-item>
+                <ion-label>Vos options</ion-label>
+                <ion-select [(ngModel)]="firebaseTextOptions" multiple="true" cancelText="Annuler" okText="Ok">
+                  <ion-select-option value="HistoireGéographieGéopolitiqueSciencePolitiques">Histoire-Géographie, Géopolitique et Science Politiques</ion-select-option>
+                  <ion-select-option value="ScienceEconomiquesSociales">Science Economiques et sociales</ion-select-option>
+                  <ion-select-option value="Mathématiques">Mathématiques</ion-select-option>
+                  <ion-select-option value="PhysiqueChimie">Physique-Chimie</ion-select-option>
+                  <ion-select-option value="HumanitésLittératuresCulturesEtrangères">Humanités, Littératures et Cultures Etrangères</ion-select-option>
+                  <ion-select-option value="HumanitésLittératuresCulturesEtrangères">Humanités, Littératures et Cultures Etrangères</ion-select-option>
+                  <ion-select-option value="LittératureLanguesCulturesAntiquité">Littérature et Langues et Cultures de l'Antiquité </ion-select-option>
+                  <ion-select-option value="SVT">Sciences de la Vie de la Terre</ion-select-option>
+                  <ion-select-option value="NumériqueSciencesInformatques">Numérique et Sciences informatques</ion-select-option>
+                  <ion-select-option value="SI">Science de l'ingénieur</ion-select-option>
+                  <ion-select-option value="Arts">Arts</ion-select-option>
+                  <ion-select-option value="Biologie-Ecologie">Biologie-Ecologie</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item *ngFor="let item of items | async">
+                <ion-label>{{ item.name }}</ion-label>
+              </ion-item>
+
+
+            </ion-list>
+
+            <div class="ion-padding">
+            <ion-button (click)="addFirebase()" expand="block">Ajouter</ion-button>
+            </div>
+
+        </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+  </ion-footer>
+</ion-app>

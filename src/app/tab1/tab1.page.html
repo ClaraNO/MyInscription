@@ -1,17 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title>
+        Porte ouverte 
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      <h1><u>Bienvenue ! </u></h1>
+    </ion-list-header>
+<br>    
+        <div class="container">
+          <img src="../../assets/Logo.PNG">
+        </div>
+<br>
+      <ion-button href="http://localhost:8100/tabs/tab3" expand="block" shape="round">Connexion</ion-button>
+<br>
+      <ion-button href="http://localhost:8100/tabs/tab2" expand="block" shape="round">Inscription</ion-button>
+  </ion-list>
 </ion-content>
+
+  <ion-item>
+    Lycée Jean Rostand 
+  </ion-item>
+
+</ion-app>
